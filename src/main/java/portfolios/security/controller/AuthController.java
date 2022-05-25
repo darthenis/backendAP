@@ -34,7 +34,7 @@ import portfolios.security.service.UserService;
 
 
 @RestController
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://portfolioap-102b7.web.app")
 public class AuthController {
     
     @Autowired

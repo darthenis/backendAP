@@ -28,7 +28,7 @@ import portfolios.service.SkillService;
 
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://portfolioap-102b7.web.app")
 @RestController
 public class SkillController {
     

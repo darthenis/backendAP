@@ -2,13 +2,9 @@
 package portfolios.security.service;
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import portfolios.email.EmailService;
 import portfolios.entity.Person;
 import portfolios.security.dto.NewUser;
@@ -17,7 +13,6 @@ import portfolios.security.repository.UserRepository;
 import portfolios.security.entity.User;
 
 @Service
-@Transactional
 public class UserService {
     
     @Autowired

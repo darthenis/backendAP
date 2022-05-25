@@ -3,8 +3,6 @@ package portfolios.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import org.eclipse.persistence.annotations.Cache;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 import javax.persistence.Column;
@@ -19,10 +17,7 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- *
- * @author emiac
- */
+
 @Getter @Setter
 @Entity
 @Table(name = "project")

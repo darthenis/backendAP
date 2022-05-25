@@ -21,10 +21,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-                <dependency>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-data-jpa</artifactId>
-                </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -41,78 +37,64 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-                <dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-                <dependency>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-security</artifactId>
-                </dependency>
-                 <dependency>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-mail</artifactId>
-                </dependency>
-                <dependency>
-                        <groupId>com.auth0</groupId>
-                        <artifactId>java-jwt</artifactId>
-                        <version>3.18.3</version>
-                </dependency>
-                <dependency>
-                        <groupId>commons-validator</groupId>
-                        <artifactId>commons-validator</artifactId>
-                        <version>1.7</version>
-                </dependency>
-                <dependency>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-validation</artifactId>
-                </dependency>
 	 <dependency>
-	  <groupId>org.eclipse.persistence</groupId>
-	  <artifactId>org.eclipse.persistence.core</artifactId>
-	  <version>2.7.9</version>
+	  <groupId>org.springframework.security</groupId>
+	  <artifactId>spring-security-core</artifactId>
+	  <version>5.6.1</version>
+	  <type>jar</type>
 	 </dependency>
 	 <dependency>
-	  <groupId>org.eclipse.persistence</groupId>
-	  <artifactId>org.eclipse.persistence.asm</artifactId>
-	  <version>9.1.0</version>
+	  <groupId>jakarta.validation</groupId>
+	  <artifactId>jakarta.validation-api</artifactId>
+	  <version>2.0.2</version>
+	  <type>jar</type>
 	 </dependency>
 	 <dependency>
-	  <groupId>org.eclipse.persistence</groupId>
-	  <artifactId>org.eclipse.persistence.antlr</artifactId>
-	  <version>2.7.9</version>
+	  <groupId>com.auth0</groupId>
+	  <artifactId>java-jwt</artifactId>
+	  <version>3.18.3</version>
+	  <type>jar</type>
 	 </dependency>
 	 <dependency>
-	  <groupId>org.eclipse.persistence</groupId>
-	  <artifactId>org.eclipse.persistence.jpa</artifactId>
-	  <version>2.7.9</version>
+	  <groupId>com.sun.mail</groupId>
+	  <artifactId>jakarta.mail</artifactId>
+	  <version>1.6.7</version>
+	  <type>jar</type>
 	 </dependency>
 	 <dependency>
-	  <groupId>org.eclipse.persistence</groupId>
-	  <artifactId>org.eclipse.persistence.moxy</artifactId>
-	  <version>2.7.9</version>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-context-support</artifactId>
+	  <version>5.3.19</version>
+	  <type>jar</type>
 	 </dependency>
 	 <dependency>
 	  <groupId>org.eclipse.persistence</groupId>
 	  <artifactId>javax.persistence</artifactId>
 	  <version>2.2.1</version>
+	  <type>jar</type>
 	 </dependency>
 	 <dependency>
-	  <groupId>org.eclipse.persistence</groupId>
-	  <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-	  <version>2.7.9</version>
-	  <scope>provided</scope>
+	  <groupId>org.springframework.data</groupId>
+	  <artifactId>spring-data-jpa</artifactId>
+	  <version>2.6.4</version>
+	  <type>jar</type>
 	 </dependency>
 	 <dependency>
 	  <groupId>org.springframework.security</groupId>
-	  <artifactId>spring-security-core</artifactId>
-	  <version>5.6.1</version>
+	  <artifactId>spring-security-config</artifactId>
+	  <version>5.6.3</version>
+	  <type>jar</type>
+	 </dependency>
+	 <dependency>
+	  <groupId>org.springframework.security</groupId>
+	  <artifactId>spring-security-web</artifactId>
+	  <version>5.6.3</version>
+	  <type>jar</type>
+	 </dependency>
+	 <dependency>
+	  <groupId>com.sun.istack</groupId>
+	  <artifactId>istack-commons-runtime</artifactId>
+	  <version>3.0.12</version>
 	  <type>jar</type>
 	 </dependency>
 	</dependencies>

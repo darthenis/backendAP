@@ -60,10 +60,8 @@ public class JwtProvider {
                             }
             
             public int getIdFromToken(String auth) throws JWTDecodeException{
-            
-                var result = this.validateToken(auth).getKeyId();
-                
-                return Integer.parseInt(result);
+       
+                return Integer.parseInt(this.validateToken(auth).getKeyId());
             
             }
             

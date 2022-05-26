@@ -43,9 +43,9 @@ public class PrivateMessagesService implements IPrivateMessagesService {
     }
 
     @Override
-    public boolean editSeen(Person person, PrivateMessagesDto privateMessagesDto) throws Exception {
+    public boolean editSeen(Person person, long id) throws Exception {
         
-        PrivateMessages privateMessages = privateMessagesRepository.getById(privateMessagesDto.getId());
+        PrivateMessages privateMessages = privateMessagesRepository.getById(id);
         
         if(privateMessages != null){
         
@@ -53,7 +53,7 @@ public class PrivateMessagesService implements IPrivateMessagesService {
             
             if(authorized){
             
-                privateMessages.setSeen(privateMessagesDto.getSeen());
+                privateMessages.setSeen(true);
                 privateMessagesRepository.save(privateMessages);
                 
                 return true;

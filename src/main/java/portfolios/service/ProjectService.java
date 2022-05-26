@@ -28,7 +28,7 @@ public class ProjectService implements IProjectService {
                 project.setDate(projectDto.getDate());
                 project.setInfo(projectDto.getInfo());
                 project.setUrl(projectDto.getUrl());
-                project.setPicUrl(projectDto.getImg());
+                project.setPicUrl(projectDto.getPicUrl());
                 project.setOrder(projectDto.getOrder());
                 project.setPerson(person);
         
@@ -54,7 +54,7 @@ public class ProjectService implements IProjectService {
                 project.setDate(e.getDate());
                 project.setInfo(e.getInfo());
                 project.setUrl(e.getUrl());
-                project.setPicUrl(e.getImg());
+                project.setPicUrl(e.getPicUrl());
                 project.setOrder(e.getOrder());
                 project.setPerson(person);
                 

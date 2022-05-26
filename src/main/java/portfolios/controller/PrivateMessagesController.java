@@ -82,17 +82,11 @@ public class PrivateMessagesController {
     }
     
     @PreAuthorize("hasRole('ROLE_USER')")
-    @PutMapping("/api/v1/service/messages")
+    @PutMapping("/api/v1/service/message/{id}")
     public ResponseEntity<?> editSeen(  @RequestHeader("Authorization") String authorization, 
-                                        @Valid @RequestBody  PrivateMessagesDto privateMessagesDto, BindingResult bindingResult){
+                                        @PathVariable("id") String id){
     
-                if(bindingResult.hasErrors()){
-                
-                    return new ResponseEntity(new Message("Error in fields", "/service/messages"), HttpStatus.BAD_REQUEST);
-                    
-                }
-                
-                
+               
                 String username = jwtProvider.getUsernameFromToken(authorization);
 
                     User user = userService.getByUsername(username);
@@ -101,16 +95,16 @@ public class PrivateMessagesController {
                     
                     try {
                         
-                        privateMessagesService.editSeen(person, privateMessagesDto);
+                        privateMessagesService.editSeen(person, Integer.parseInt(id));
                        
                         
-                        return new ResponseEntity(new Message("Edit succesful", "/service/messages"), HttpStatus.CREATED);
+                        return new ResponseEntity(new Message("Edit succesful", "/service/message"), HttpStatus.CREATED);
                         
                     } catch(Exception e){
                     
                        e.printStackTrace();
                     
-                       return new ResponseEntity(new Message("error in fields", "/service/messages"), HttpStatus.INTERNAL_SERVER_ERROR);
+                       return new ResponseEntity(new Message("error in fields", "/service/message"), HttpStatus.INTERNAL_SERVER_ERROR);
                     
                     }
 

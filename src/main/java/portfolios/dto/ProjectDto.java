@@ -17,7 +17,7 @@ public class ProjectDto {
     @NotBlank
     private String title;
     
-    private String img;
+    private String picUrl;
     
     @NotNull
     private LocalDate date;

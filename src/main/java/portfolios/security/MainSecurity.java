@@ -107,7 +107,9 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
     source.registerCorsConfiguration("/**", configuration);
     return source;
 }
+    //https://portfolioap-102b7.web.app
     
+    //http://localhost:4200
     
     @Bean
     public RestTemplate restTemplate(){

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class EmailService implements IEmailSender {
     
     
-    private final static String LINK = "http://localhost:4200/auth/confirm/";
+    private final static String LINK = "https://portfolioap-102b7.web.app/auth/confirm/";
     
     @Autowired
     private JavaMailSender mailSender;

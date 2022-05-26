@@ -27,7 +27,7 @@ import portfolios.security.jwt.JwtProvider;
 import portfolios.security.service.UserService;
 import portfolios.service.ExperienceService;
 
-@CrossOrigin(origins = "https://portfolioap-102b7.web.app")
+
 @RestController
 public class ExperienceController {
     

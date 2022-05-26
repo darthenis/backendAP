@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -118,7 +117,7 @@ public class PrivateMessagesController {
     }
     
     @PreAuthorize("hasRole('ROLE_USER')")
-    @DeleteMapping("/api/v1/service/messages/{id}")
+    @DeleteMapping("/api/v1/service/message/{id}")
     public ResponseEntity<?> deleteExperience(@RequestHeader("Authorization") String authorization, @PathVariable("id") String id, HttpServletResponse res ){
 
          String username = jwtProvider.getUsernameFromToken(authorization);

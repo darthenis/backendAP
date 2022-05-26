@@ -93,7 +93,7 @@ public class EmailService implements IEmailSender {
     
     public String buildEmail(String username, String link){
     
-            return "<h1>Bienvenid@ a Apportfolios"+ username +"</h1>"+
+            return "<h1>Bienvenid@ a Apportfolios "+ username +"</h1>"+
                     "<p>Active su cuenta desde el siguiente link:</p>"+ link;
             
     }

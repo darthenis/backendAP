@@ -26,7 +26,6 @@ import portfolios.security.jwt.JwtProvider;
 import portfolios.security.service.UserService;
 import portfolios.service.ProjectService;
 
-@CrossOrigin(origins = "https://portfolioap-102b7.web.app")
 @RestController
 public class ProjectController {
     

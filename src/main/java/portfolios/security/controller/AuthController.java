@@ -73,6 +73,8 @@ public class AuthController {
                     return new ResponseEntity<>(new Message("Error in fields", "/auth/login"), HttpStatus.BAD_REQUEST);
             }
          
+         try{
+         
          Authentication authentication = 
                         authManager.authenticate(new UsernamePasswordAuthenticationToken(loginUser.getUsername(), loginUser.getPassword()));
          
@@ -84,6 +86,14 @@ public class AuthController {
         
          
          return  new ResponseEntity<>(new LoginResponse(jwt,user.getId()), HttpStatus.ACCEPTED);
+         
+         
+         } catch(Exception e){
+         
+         
+            return new ResponseEntity<>(new Message("No Authorized", "/auth/login"), HttpStatus.UNAUTHORIZED);
+         
+         }
      
         
     }

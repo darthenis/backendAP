@@ -126,7 +126,7 @@ public class AuthController {
     }
     
     
-    @GetMapping("/auth/confirm")
+    @PostMapping("/auth/confirm")
     public ResponseEntity<?> confirm(@RequestBody String token){
         
             try{

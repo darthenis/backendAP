@@ -19,7 +19,7 @@ import portfolios.security.service.UserService;
 public class SetupDataLoader implements
   ApplicationListener<ContextRefreshedEvent> {
 
-    boolean alreadySetup = true;
+    boolean alreadySetup = false;
 
     @Autowired
     private UserService userService;
@@ -50,7 +50,7 @@ public class SetupDataLoader implements
         createRoleIfNotFound("ROLE_USER", Arrays.asList(readPrivilege, writePrivilege));
 
         Role userRole = roleService.findByName("ROLE_USER");
-        User user = new User("Test", passwordEncoder.encode("test"), "emi.acevedo.letras@gmail.com");
+        User user = new User("Test", passwordEncoder.encode("test"), "test@gmail.com");
         user.setRoles(Arrays.asList(userRole));
         user.setEnabled(true);
         userService.save(user);

@@ -19,7 +19,7 @@ import portfolios.security.service.UserService;
 public class SetupDataLoader implements
   ApplicationListener<ContextRefreshedEvent> {
 
-    boolean alreadySetup = false;
+    boolean alreadySetup = true;
 
     @Autowired
     private UserService userService;

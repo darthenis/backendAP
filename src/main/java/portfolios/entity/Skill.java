@@ -26,7 +26,7 @@ public class Skill implements Serializable{
     @Column(name = "id")
     private int id;
 
-    @Column(name="name", length = 5)
+    @Column(name="name", length = 10)
     private String name;
     
     @Column(name = "porcent")

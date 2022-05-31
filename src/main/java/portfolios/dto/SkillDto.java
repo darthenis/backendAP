@@ -13,7 +13,7 @@ public class SkillDto {
     private int id;
     
     @NotBlank
-    @Size(max = 5)
+    @Size(max = 10)
     private String name;
     
     @NotNull

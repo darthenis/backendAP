@@ -100,7 +100,7 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
+        configuration.setAllowedOrigins(Arrays.asList("https://portfolioap-102b7.web.app"));
         configuration.setAllowedMethods(Arrays.asList("GET", "PUT", "POST","OPTIONS", "DELETE"));
         configuration.setAllowedHeaders(Arrays.asList("authorization","content-type"));
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

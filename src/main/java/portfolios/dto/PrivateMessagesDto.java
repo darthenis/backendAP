@@ -17,15 +17,17 @@ public class PrivateMessagesDto {
 
     private String username;
     
-    @Size(max=50)
+   
     @NotBlank
+    @Size(max=30)
     private String name;
     
     @Email
+    @Size(max=30)
     @NotNull
     private String email;
     
-    @Size(max=1600)
+    @Size(max=255)
     @NotBlank
     private String message;
     

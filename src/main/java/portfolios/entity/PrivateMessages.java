@@ -1,12 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package portfolios.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,23 +15,24 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import java.io.Serializable;
 
 
 @Entity
 @Setter
 @Getter
 @Table(name = "messages")
-public class PrivateMessages {
+public class PrivateMessages implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
     
-    @Column(name="name")
+    @Column(name="name", length = 30)
     private String name;
     
-    @Column(name="email")
+    @Column(name="email", length = 30)
     private String email;
     
     @Column(name="message")

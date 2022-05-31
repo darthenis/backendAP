@@ -4,8 +4,6 @@ package portfolios.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,8 +13,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 
 import lombok.*;
@@ -34,16 +30,16 @@ public class Experience implements Serializable{
     @Column(name = "id")
     private int id;
     
-    @Column(name = "title")
+    @Column(name = "title", length = 25)
     private String title;
     
-    @Column(name = "name")
+    @Column(name = "name", length = 25)
     private String name;
     
     @Column(name = "logo_url")
     private String logoUrl;
     
-    @Column(name = "job")
+    @Column(name = "job", length = 25)
     private String job;
 
    

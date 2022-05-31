@@ -29,19 +29,19 @@ public class Person implements Serializable {
     @Column(name = "id")
     private int id;
     
-     @Column(name = "name")
+    @Column(name = "name", length = 13)
     private String name;
     
-    @Column(name = "last_name")
+    @Column(name = "last_name", length = 13)
     private String lastName;
     
-     @Column(name = "country")
+    @Column(name = "country", length = 15)
     private String country;
     
-    @Column(name = "province_state")
+    @Column(name = "province_state", length = 15)
     private String state;
     
-    @Column(name = "locality")
+    @Column(name = "locality", length = 15)
     private String city;
     
     @Column(name = "pic_avatar")
@@ -50,10 +50,10 @@ public class Person implements Serializable {
     @Column(name = "pic_banner")
     private String banner;
     
-    @Column(name = "title")
+    @Column(name = "title", length = 30)
     private String title;
     
-    @Column(name = "info")
+    @Column(name = "info", length = 250)
     private String info;
     
     @Column(name = "facebook")

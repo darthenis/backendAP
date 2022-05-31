@@ -25,7 +25,7 @@ public class ProjectService implements IProjectService {
 
      Project project = new Project();
                 project.setTitle(projectDto.getTitle());
-                project.setDate(projectDto.getDate());
+                project.setAtCreated(projectDto.getAtCreated());
                 project.setInfo(projectDto.getInfo());
                 project.setUrl(projectDto.getUrl());
                 project.setPicUrl(projectDto.getPicUrl());
@@ -51,7 +51,7 @@ public class ProjectService implements IProjectService {
                 if(idPerson == project.getPerson().getId()){
                 
                 project.setTitle(e.getTitle());
-                project.setDate(e.getDate());
+                project.setAtCreated(e.getAtCreated());
                 project.setInfo(e.getInfo());
                 project.setUrl(e.getUrl());
                 project.setPicUrl(e.getPicUrl());

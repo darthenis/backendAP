@@ -27,13 +27,13 @@ public class Education implements Serializable{
     @Column(name="id")
     private int id;
     
-    @Column(name = "title")
+    @Column(name = "title", length = 25)
     private String title;
     
-    @Column(name = "name")
+    @Column(name = "name", length = 25)
     private String name;
     
-    @Column(name = "logo_url")
+    @Column(name = "logo_url", length = 255)
     private String logoUrl;
     
     @Column(name = "date_init")
@@ -42,7 +42,7 @@ public class Education implements Serializable{
     @Column(name="date_end")
     private LocalDate endDate;
     
-    @Column(name = "career")
+    @Column(name = "career", length = 25)
     private String career;
     
     @Column(name = "order_list")

@@ -12,7 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,7 +26,7 @@ public class Skill implements Serializable{
     @Column(name = "id")
     private int id;
 
-    @Column(name="name")
+    @Column(name="name", length = 5)
     private String name;
     
     @Column(name = "porcent")

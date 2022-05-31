@@ -28,16 +28,16 @@ public class Project implements Serializable {
     @Column(name = "id")
     private int id;
     
-    @Column(name = "name")
+    @Column(name = "title", length = 20)
     private String title;
     
     @Column(name = "pic_url")
     private String picUrl;
     
-    @Column(name = "date")
-    private LocalDate date;
+    @Column(name = "atCreated")
+    private LocalDate atCreated;
     
-    @Column(name = "info")
+    @Column(name = "info", length = 255)
     private String info;
     
     @Column(name = "url")

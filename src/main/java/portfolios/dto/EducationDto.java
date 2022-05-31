@@ -4,6 +4,7 @@ package portfolios.dto;
 import java.time.LocalDate;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,11 +15,14 @@ public class EducationDto {
     private int id;
     
     @NotBlank
+    @Size(min = 4, max = 25)
     private String title;
     
     @NotBlank
+    @Size(min = 4, max = 25)
     private String name;
     
+    @Size(max = 255)
     private String logoUrl;
     
     @NotNull
@@ -27,6 +31,7 @@ public class EducationDto {
     private LocalDate endDate;
     
     @NotBlank
+    @Size(min = 4, max = 25)
     private String career;
     
     @NotNull

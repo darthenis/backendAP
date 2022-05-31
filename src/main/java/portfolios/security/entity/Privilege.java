@@ -1,9 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package portfolios.security.entity;
 
+import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,7 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Privilege {
+public class Privilege implements Serializable {
  
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -39,9 +39,7 @@ public class EmailService implements IEmailSender {
            helper.setTo(to);
            
            helper.setSubject("confirme su email");
-           
-           helper.setFrom("emi.acevedo.letras@gmail.com");
-           
+ 
            mailSender.send(mimeMessage);
        
        } catch (MessagingException e){

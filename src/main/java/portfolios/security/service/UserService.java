@@ -63,22 +63,6 @@ public class UserService {
     
     public void signUpUser(NewUser newUser){
     
-    boolean emailExists =  userRepository.existsByEmail(newUser.getEmail());
-    
-    boolean userExists = userRepository.existsByUsername(newUser.getUsername());
-        
-    if(emailExists) {
-    
-        throw new IllegalStateException("email already taken");
-    
-    }
-    
-      if(userExists) {
-    
-        throw new IllegalStateException("user already taken");
-    
-    }
-    
     User user = new User(newUser.getUsername(), newUser.getPassword(), newUser.getEmail());
 
     Role roles = rolService.findByName("ROLE_USER");
@@ -88,6 +72,9 @@ public class UserService {
     
     person.setName(newUser.getName());
     person.setLastName(newUser.getLastname());
+    person.setCountry(newUser.getCountry());
+    person.setState(newUser.getState());
+    person.setCity(newUser.getCity());
     
     user.setPerson(person);
             

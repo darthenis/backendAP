@@ -33,6 +33,18 @@ public class NewUser {
         @Size(min = 3, max = 13)
         private String lastname;
         
+        @NotBlank
+        @Size(min = 4, max = 15)
+        private String country;
+        
+        @NotBlank
+        @Size(min = 4, max = 15)
+        private String state;
+        
+        @NotBlank
+        @Size(min = 4, max = 15)
+        private String city;
+        
         private Set<String> roles = new HashSet<>();
         
         public NewUser(){}

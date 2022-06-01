@@ -11,11 +11,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import portfolios.dto.Message;
 import portfolios.email.EmailService;
@@ -72,6 +69,14 @@ public class AuthController {
             
                     return new ResponseEntity<>(new Message("Error in fields", "/auth/login"), HttpStatus.BAD_REQUEST);
             }
+         
+         boolean isEnabled = userService.getByUsername(loginUser.getUsername()).isEnabled();
+         
+         if(!isEnabled){
+             
+                return new ResponseEntity<>(new Message("User's email is not confirmed", "/auth/login"), HttpStatus.UNAUTHORIZED);
+             
+         }
          
          try{
          

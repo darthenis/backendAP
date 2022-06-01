@@ -82,7 +82,7 @@ public class SkillController {
                 
             if(skillService.edit(person, skillDto)){
             
-                    return new ResponseEntity("skill saved", HttpStatus.OK);
+                    return new ResponseEntity(new Message("Skill edited", "/user/skill"), HttpStatus.OK);
             
             } else {
             

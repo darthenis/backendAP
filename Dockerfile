@@ -12,4 +12,4 @@ FROM openjdk:11-jdk-slim
 COPY --from=build /target/Portfolios-0.0.1-SNAPSHOT.jar Portfolios.jar
 # ENV PORT=8080
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","demo.jar"]
+ENTRYPOINT ["java","-jar","Portfolios.jar"]
